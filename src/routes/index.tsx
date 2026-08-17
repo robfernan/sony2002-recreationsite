@@ -87,7 +87,7 @@ function Index() {
         </header>
 
         {/* Nav bar */}
-        <nav className="flex items-center gap-4 border-y border-sony-rule px-3 py-[6px] text-[10px] font-bold tracking-wide">
+        <nav className="flex items-center gap-3 whitespace-nowrap border-y border-sony-rule px-3 py-[6px] text-[9px] font-bold tracking-wide">
           <a href="#" className="text-sony-blue hover:underline">
             <Arrow /> SHOP
           </a>
@@ -235,9 +235,9 @@ function Index() {
                   width={640}
                   height={512}
                   loading="lazy"
-                  className="h-[62px] w-full object-cover object-top"
+                  className="h-[86px] w-full object-cover object-[50%_30%]"
                 />
-                <span className="absolute right-2 top-2 text-right text-[12px] font-bold leading-[1.15] text-background">
+                <span className="absolute right-2 top-3 text-right text-[13px] font-bold leading-[1.2] text-background drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)]">
                   Back
                   <br />
                   to School
