@@ -228,23 +228,23 @@ function Index() {
             <div />
             <div className="pt-1">
               <p className="mb-1 text-right text-[11px] text-sony-orange">www.sonystyle.com</p>
-              <div className="relative bg-sony-panel-deep">
+              <div className="flex bg-sony-blue">
                 <img
                   src={kids}
                   alt="Back to school at SonyStyle"
                   width={640}
                   height={512}
                   loading="lazy"
-                  className="h-[86px] w-full object-cover object-[50%_30%]"
+                  className="h-[86px] w-[62%] object-cover object-[50%_25%]"
                 />
-                <span className="absolute right-2 top-3 text-right text-[13px] font-bold leading-[1.2] text-background drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)]">
+                <span className="flex flex-1 flex-col justify-center px-2 text-right text-[13px] font-bold leading-[1.2] text-background">
                   Back
                   <br />
                   to School
-                  <br />
                   <span className="text-[10px] font-normal">in SonyStyle</span>
                 </span>
               </div>
+
             </div>
           </div>
           <div className="bg-sony-panel-deep px-4 py-2 text-[11px] leading-[1.6]">
