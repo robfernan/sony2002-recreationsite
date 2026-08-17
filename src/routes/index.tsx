@@ -113,7 +113,7 @@ function Index() {
             height={231}
             className="block w-full"
           />
-          <aside className="absolute right-[14px] top-[38px] w-[190px] text-background">
+          <aside className="absolute right-[18px] top-[56px] w-[172px] text-background">
             <h2 className="text-[14px] font-bold">what&apos;s new</h2>
             <p className="mt-2 text-[10px] leading-[1.5]">
               PlayStation 2 is now online! Feel the power of the new Network Adaptor for
