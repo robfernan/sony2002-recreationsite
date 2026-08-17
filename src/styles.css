@@ -132,6 +132,26 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* Retro Sony 2002 portal tokens */
+:root {
+  --sony-orange: oklch(0.7 0.19 55);
+  --sony-orange-deep: oklch(0.63 0.19 48);
+  --sony-blue: oklch(0.38 0.11 258);
+  --sony-panel: oklch(0.91 0.03 245);
+  --sony-panel-deep: oklch(0.84 0.05 245);
+  --sony-rule: oklch(0.8 0.02 250);
+}
+
+@theme inline {
+  --color-sony-orange: var(--sony-orange);
+  --color-sony-orange-deep: var(--sony-orange-deep);
+  --color-sony-blue: var(--sony-blue);
+  --color-sony-panel: var(--sony-panel);
+  --color-sony-panel-deep: var(--sony-panel-deep);
+  --color-sony-rule: var(--sony-rule);
+  --font-sony: Verdana, Geneva, "DejaVu Sans", sans-serif;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -140,5 +160,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sony);
   }
 }
+
