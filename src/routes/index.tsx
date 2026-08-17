@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroWoman from "@/assets/hero-woman.jpg";
-import kids from "@/assets/kids.jpg";
+import logoAsset from "@/assets/hdr_logo_sony.gif.asset.json";
+import moodAsset from "@/assets/home_photo_mood.jpg.asset.json";
+import promo1Asset from "@/assets/home_photo_promo1_on.jpg.asset.json";
+import promo2Asset from "@/assets/home_photo_promo2_on.jpg.asset.json";
+import promo3Asset from "@/assets/home_photo_promo3_on.jpg.asset.json";
+import promo4Asset from "@/assets/home_photo_promo4_on.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,13 +27,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function Arrow({ tone = "orange" }: { tone?: "orange" | "white" }) {
+function Arrow() {
   return (
     <span
       aria-hidden
-      className={`mr-1 inline-block h-[9px] w-[9px] align-[-1px] ${
-        tone === "orange" ? "bg-sony-orange" : "bg-background"
-      }`}
+      className="mr-1 inline-block h-[7px] w-[6px] align-[0px] bg-sony-orange"
       style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}
     />
   );
@@ -37,10 +39,8 @@ function Arrow({ tone = "orange" }: { tone?: "orange" | "white" }) {
 
 function ChevLink({ children }: { children: React.ReactNode }) {
   return (
-    <a href="#" className="block text-[11px] leading-[1.5] text-sony-orange hover:underline">
-      <span aria-hidden className="mr-1">
-        »
-      </span>
+    <a href="#" className="block text-[11px] leading-[1.6] text-sony-blue hover:underline">
+      <Arrow />
       {children}
     </a>
   );
@@ -58,40 +58,43 @@ const topNav = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-sony-blue">
-      <div className="mx-auto w-[822px] max-w-full">
+      <div className="mx-auto w-[740px] max-w-full">
         {/* Masthead */}
-        <header className="flex items-center gap-6 px-3 py-4">
-          <h1 className="text-[30px] font-bold italic tracking-[0.12em] text-foreground">SONY</h1>
+        <header className="flex items-end gap-6 py-3">
+          <img
+            src={logoAsset.url}
+            alt="Sony"
+            width={101}
+            height={52}
+            className="h-[26px] w-auto"
+          />
           <form
-            className="ml-8 flex flex-1 items-center gap-2"
+            className="flex flex-1 items-center gap-2 pb-[2px]"
             onSubmit={(e) => e.preventDefault()}
           >
-            <label
-              htmlFor="q"
-              className="text-[11px] font-bold tracking-[0.12em] text-sony-blue"
-            >
-              SEARCH :
+            <label htmlFor="q" className="text-[10px] font-bold tracking-[0.1em] text-sony-blue">
+              SEARCH:
             </label>
             <input
               id="q"
-              className="h-[19px] w-[170px] border border-sony-rule bg-background px-1 text-[11px] outline-none"
+              className="h-[18px] w-[150px] border border-sony-rule bg-background px-1 text-[11px] outline-none"
             />
-            <button className="h-[19px] bg-sony-orange px-3 text-[10px] font-bold text-background">
+            <button className="h-[18px] bg-sony-orange px-2 text-[10px] font-bold text-background">
               GO
             </button>
           </form>
-          <a href="#" className="text-[11px] text-sony-blue hover:underline">
+          <a href="#" className="pb-[3px] text-[11px] text-sony-blue hover:underline">
             <Arrow /> Global Sites
           </a>
-          <span className="text-[15px] font-bold text-foreground">USA</span>
+          <span className="pb-[2px] text-[13px] font-bold text-sony-blue">USA</span>
         </header>
 
         {/* Nav bar */}
-        <nav className="flex items-center gap-3 whitespace-nowrap border-y border-sony-rule px-3 py-[6px] text-[9px] font-bold tracking-wide">
+        <nav className="flex items-center gap-[10px] whitespace-nowrap border-y border-sony-rule py-[5px] text-[9px] font-bold tracking-wide">
           <a href="#" className="text-sony-blue hover:underline">
             <Arrow /> SHOP
           </a>
-          <span className="ml-4 text-[10px] font-normal tracking-[0.18em] text-muted-foreground">
+          <span className="ml-2 text-[9px] font-normal tracking-[0.15em] text-muted-foreground">
             EXPLORE:
           </span>
           {topNav.map((item) => (
@@ -102,46 +105,16 @@ function Index() {
         </nav>
 
         {/* Hero */}
-        <section className="relative mt-[6px] h-[300px] overflow-hidden">
+        <section className="relative mt-[6px]">
           <img
-            src={heroWoman}
-            alt="Woman listening to music on a Sony wrist player"
-            width={1024}
-            height={768}
-            className="absolute left-0 top-0 h-full w-[430px] object-cover object-[35%_20%]"
+            src={moodAsset.url}
+            alt="Welcome to the world of Sony — music, movies, TV, games, electronics"
+            width={740}
+            height={231}
+            className="block w-full"
           />
-          <div
-            className="absolute left-[210px] top-0 h-full w-[540px] bg-sony-orange"
-            style={{ clipPath: "polygon(14% 0, 100% 0, 100% 100%, 60% 100%, 44% 62%, 0 62%)" }}
-          >
-            <div
-              aria-hidden
-              className="absolute left-[6%] top-[8%] h-[150px] w-[150px] opacity-40"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle, oklch(0.82 0.13 60) 42%, transparent 44%)",
-                backgroundSize: "15px 15px",
-              }}
-            />
-          </div>
-
-          <div className="absolute left-[248px] top-[118px] w-[290px]">
-            <p className="mb-3 border-l border-background/70 pl-3 text-[11px] font-bold leading-[1.35] text-background">
-              music, movies, TV,
-              <br />
-              games , electronics
-            </p>
-            <p className="text-[30px] leading-[1] text-sony-blue">
-              welcome{" "}
-              <span className="text-[16px] text-background">
-                to the <span className="text-[19px]">world of</span>
-              </span>
-            </p>
-            <p className="mt-1 text-[30px] font-bold leading-none text-sony-blue">Sony</p>
-          </div>
-
-          <aside className="absolute left-[552px] top-[110px] w-[190px] text-background">
-            <h2 className="text-[15px] font-bold">what&apos;s new</h2>
+          <aside className="absolute right-[18px] top-[56px] w-[172px] text-background">
+            <h2 className="text-[14px] font-bold">what&apos;s new</h2>
             <p className="mt-2 text-[10px] leading-[1.5]">
               PlayStation 2 is now online! Feel the power of the new Network Adaptor for
               PlayStation 2 which includes playable demos of Madden NFL 2003, Frequency and more.
@@ -151,16 +124,12 @@ function Index() {
         </section>
 
         {/* Card row */}
-        <section className="mt-[6px] grid grid-cols-[1fr_1fr_1fr] gap-[6px] px-0">
+        <section className="mt-[6px] grid grid-cols-3 gap-[6px]">
           <Card
             title="SEE"
             url="www.screenblast.com"
-            tile={
-              <Tile
-                lines={["THE ONLY", "SOURCE FOR", "HIP-HOP"]}
-                tone="dark"
-              />
-            }
+            promo={promo1Asset.url}
+            promoAlt="Wake Up Show .com"
             body={
               <>
                 <p className="text-[11px] leading-[1.5]">
@@ -176,7 +145,8 @@ function Index() {
           <Card
             title="HEAR"
             url="usa.sonymusic.com"
-            tile={<Tile lines={["BARBERSHOP", "MUSIC FROM", "P DIDDY & MORE"]} tone="mid" />}
+            promo={promo2Asset.url}
+            promoAlt="Barbershop — in stores August 27th"
             body={
               <>
                 <p className="text-[11px] leading-[1.5]">
@@ -192,12 +162,12 @@ function Index() {
           <Card
             title="PLAY"
             url="gameshownetwork.com"
-            tile={<Tile lines={["CONNECT", "COLLECT", "SWEEPSTAKES"]} tone="grey" />}
+            promo={promo3Asset.url}
+            promoAlt="Connect & Collect Sweepstakes"
             body={
               <>
                 <p className="text-[11px] leading-[1.5] text-sony-orange">
-                  Pre-order EverQuest:{" "}
-                  <span className="text-sony-blue">The Planes of Power</span>
+                  Pre-order EverQuest: <span className="text-sony-blue">The Planes of Power</span>
                 </p>
                 <p className="mt-3 text-[11px] leading-[1.5]">
                   Relax your mind with a game of <span className="text-sony-orange">Yuetan</span>
@@ -211,43 +181,35 @@ function Index() {
         {/* Shop panel */}
         <section className="relative mt-[6px] bg-sony-panel">
           <div
-            className="absolute left-0 top-0 h-[18px] w-[18px] bg-background"
+            className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
             style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
           />
-          <div className="grid grid-cols-[1fr_1fr_260px] gap-4 px-4 pb-2 pt-3">
-            <div className="col-span-3 -mb-1">
+          <div className="flex items-start justify-between gap-6 px-3 pb-2 pt-3">
+            <div>
               <h2 className="text-[15px] font-bold text-sony-blue">SHOP</h2>
-            </div>
-            <div className="pt-1">
-              <ChevLink>Electronics at Sony Style</ChevLink>
-              <ChevLink>PlayStation Store</ChevLink>
-              <ChevLink>Sony Pictures Studio Store</ChevLink>
-              <ChevLink>Sony Music Shop</ChevLink>
-              <ChevLink>Get the Sony Card</ChevLink>
-            </div>
-            <div />
-            <div className="pt-1">
-              <p className="mb-1 text-right text-[11px] text-sony-orange">www.sonystyle.com</p>
-              <div className="flex bg-sony-blue">
-                <img
-                  src={kids}
-                  alt="Back to school at SonyStyle"
-                  width={640}
-                  height={512}
-                  loading="lazy"
-                  className="h-[86px] w-[62%] object-cover object-[50%_25%]"
-                />
-                <span className="flex flex-1 flex-col justify-center px-2 text-right text-[13px] font-bold leading-[1.2] text-background">
-                  Back
-                  <br />
-                  to School
-                  <span className="text-[10px] font-normal">in SonyStyle</span>
-                </span>
+              <p className="mb-2 mt-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
+              <div className="grid grid-cols-2 gap-x-8">
+                <div>
+                  <ChevLink>Electronics at Sony Style</ChevLink>
+                  <ChevLink>PlayStation Store</ChevLink>
+                  <ChevLink>Sony Pictures Studio Store</ChevLink>
+                </div>
+                <div>
+                  <ChevLink>Sony Music Shop</ChevLink>
+                  <ChevLink>Get the Sony Card</ChevLink>
+                </div>
               </div>
-
             </div>
+            <img
+              src={promo4Asset.url}
+              alt="Back to School in SonyStyle"
+              width={120}
+              height={60}
+              loading="lazy"
+              className="mt-[6px] block"
+            />
           </div>
-          <div className="bg-sony-panel-deep px-4 py-2 text-[11px] leading-[1.6]">
+          <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
             {["CLIÉ", "VAIO", "Mavica", "Handycam", "Memory Stick", "Sony Ericsson", "Xplod"].map(
               (t, i, arr) => (
                 <span key={t}>
@@ -258,7 +220,7 @@ function Index() {
                 </span>
               ),
             )}
-            <br />
+            <span className="px-1 text-sony-rule">|</span>
             <a href="#" className="hover:underline">
               Electronics Service &amp; Support
             </a>
@@ -266,7 +228,7 @@ function Index() {
         </section>
 
         {/* Footer */}
-        <footer className="mt-6 border-t border-sony-rule pt-3 pb-8 text-center">
+        <footer className="mt-5 border-t border-sony-rule pb-8 pt-3 text-center">
           <nav className="flex flex-wrap items-center justify-center gap-5 text-[11px]">
             {[
               "Index of Sites",
@@ -288,41 +250,18 @@ function Index() {
   );
 }
 
-function Tile({ lines, tone }: { lines: string[]; tone: "dark" | "mid" | "grey" }) {
-  const bg =
-    tone === "dark"
-      ? "bg-foreground text-background"
-      : tone === "mid"
-        ? "bg-sony-blue text-background"
-        : "bg-sony-panel-deep text-sony-blue";
-  return (
-    <div className={`flex h-[68px] flex-col items-center justify-center ${bg}`}>
-      {lines.map((l, i) => (
-        <span
-          key={l}
-          className={
-            i === 1
-              ? "text-[13px] font-bold uppercase tracking-tight"
-              : "text-[10px] font-bold uppercase"
-          }
-        >
-          {l}
-        </span>
-      ))}
-    </div>
-  );
-}
-
 function Card({
   title,
   url,
-  tile,
+  promo,
+  promoAlt,
   body,
   footer,
 }: {
   title: string;
   url: string;
-  tile: React.ReactNode;
+  promo: string;
+  promoAlt: string;
   body: React.ReactNode;
   footer: string[];
 }) {
@@ -335,7 +274,7 @@ function Card({
       <div className="flex-1 px-3 pb-3 pt-3">
         <h2 className="text-[15px] font-bold text-sony-blue">{title}</h2>
         <p className="mb-2 mt-1 text-[11px] text-sony-orange">{url}</p>
-        {tile}
+        <img src={promo} alt={promoAlt} width={120} height={60} loading="lazy" className="block" />
         <div className="mt-3">{body}</div>
       </div>
       <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
