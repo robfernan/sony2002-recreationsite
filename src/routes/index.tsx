@@ -57,10 +57,11 @@ const topNav = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-sony-blue">
-      <div className="mx-auto w-[740px] max-w-full">
+    <div className="min-h-screen bg-background text-sony-blue [zoom:1] min-[1500px]:[zoom:1.3] min-[2200px]:[zoom:1.85] min-[3200px]:[zoom:2.6]">
+      <div className="mx-auto w-full max-w-[740px] px-3 lg:px-0">
+
         {/* Masthead */}
-        <header className="flex items-end gap-6 py-3">
+        <header className="flex flex-wrap items-end gap-x-6 gap-y-2 py-3">
           <img
             src={logoAsset.url}
             alt="Sony"
@@ -90,7 +91,7 @@ function Index() {
         </header>
 
         {/* Nav bar */}
-        <nav className="flex items-center gap-[10px] whitespace-nowrap border-y border-sony-rule py-[5px] text-[9px] font-bold tracking-wide">
+        <nav className="flex items-center gap-x-[10px] gap-y-1 border-y border-sony-rule py-[5px] text-[9px] font-bold tracking-wide max-lg:flex-wrap lg:whitespace-nowrap">
           <a href="#" className="text-sony-blue hover:underline">
             <Arrow /> SHOP
           </a>
@@ -105,7 +106,7 @@ function Index() {
         </nav>
 
         {/* Hero */}
-        <section className="relative mt-[6px]">
+        <section className="relative mt-[6px] @container">
           <img
             src={moodAsset.url}
             alt="Welcome to the world of Sony — music, movies, TV, games, electronics"
@@ -113,9 +114,12 @@ function Index() {
             height={231}
             className="block w-full"
           />
-          <aside className="absolute right-[18px] top-[56px] w-[172px] text-background">
-            <h2 className="text-[14px] font-bold">what&apos;s new</h2>
-            <p className="mt-2 text-[10px] leading-[1.5]">
+          <aside
+            className="absolute right-[2.4%] top-[21%] hidden w-[24%] text-background sm:block"
+            style={{ fontSize: "1.02cqw" }}
+          >
+            <h2 className="text-[1.9em] font-bold leading-none">what&apos;s new</h2>
+            <p className="mt-[0.8em] text-[1.35em] leading-[1.5]">
               PlayStation 2 is now online! Feel the power of the new Network Adaptor for
               PlayStation 2 which includes playable demos of Madden NFL 2003, Frequency and more.
               <span className="font-bold"> Get your game online.</span>
@@ -123,8 +127,19 @@ function Index() {
           </aside>
         </section>
 
-        {/* Card row */}
-        <section className="mt-[6px] grid grid-cols-3 gap-[6px]">
+        {/* What's new — small screens */}
+        <section className="mt-[6px] bg-sony-orange px-3 py-3 text-background sm:hidden">
+          <h2 className="text-[14px] font-bold">what&apos;s new</h2>
+          <p className="mt-2 text-[11px] leading-[1.5]">
+            PlayStation 2 is now online! Feel the power of the new Network Adaptor for PlayStation
+            2 which includes playable demos of Madden NFL 2003, Frequency and more.
+            <span className="font-bold"> Get your game online.</span>
+          </p>
+        </section>
+
+
+        {/* Card row — SEE / HEAR / PLAY / SHOP */}
+        <section className="mt-[6px] grid grid-cols-1 gap-[6px] sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1.6fr]">
           <Card
             title="SEE"
             url="www.screenblast.com"
@@ -176,56 +191,55 @@ function Index() {
             }
             footer={["PlayStation", "The Station", "AIBO", "Metreon"]}
           />
-        </section>
 
-        {/* Shop panel */}
-        <section className="relative mt-[6px] bg-sony-panel">
-          <div
-            className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
-            style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-          />
-          <div className="flex items-start justify-between gap-6 px-3 pb-2 pt-3">
-            <div>
+          {/* SHOP card */}
+          <article className="relative flex flex-col bg-sony-panel sm:col-span-2 lg:col-span-1">
+            <div
+              className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
+              style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+            />
+            <div className="flex-1 px-3 pb-3 pt-3">
               <h2 className="text-[15px] font-bold text-sony-blue">SHOP</h2>
-              <p className="mb-2 mt-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
-              <div className="grid grid-cols-2 gap-x-8">
-                <div>
+              <div className="mt-2 flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+                <div className="min-w-0">
                   <ChevLink>Electronics at Sony Style</ChevLink>
                   <ChevLink>PlayStation Store</ChevLink>
                   <ChevLink>Sony Pictures Studio Store</ChevLink>
-                </div>
-                <div>
                   <ChevLink>Sony Music Shop</ChevLink>
                   <ChevLink>Get the Sony Card</ChevLink>
                 </div>
+                <div className="shrink-0">
+                  <p className="mb-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
+                  <img
+                    src={promo4Asset.url}
+                    alt="Back to School in SonyStyle"
+                    width={120}
+                    height={60}
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
               </div>
             </div>
-            <img
-              src={promo4Asset.url}
-              alt="Back to School in SonyStyle"
-              width={120}
-              height={60}
-              loading="lazy"
-              className="mt-[6px] block"
-            />
-          </div>
-          <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
-            {["CLIÉ", "VAIO", "Mavica", "Handycam", "Memory Stick", "Sony Ericsson", "Xplod"].map(
-              (t, i, arr) => (
-                <span key={t}>
-                  <a href="#" className="hover:underline">
-                    {t}
-                  </a>
-                  {i < arr.length - 1 && <span className="px-1 text-sony-rule">|</span>}
-                </span>
-              ),
-            )}
-            <span className="px-1 text-sony-rule">|</span>
-            <a href="#" className="hover:underline">
-              Electronics Service &amp; Support
-            </a>
-          </div>
+            <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
+              {["CLIÉ", "VAIO", "Mavica", "Handycam", "Memory Stick", "Sony Ericsson", "Xplod"].map(
+                (t, i, arr) => (
+                  <span key={t}>
+                    <a href="#" className="hover:underline">
+                      {t}
+                    </a>
+                    {i < arr.length - 1 && <span className="px-1 text-sony-rule">|</span>}
+                  </span>
+                ),
+              )}
+              <br />
+              <a href="#" className="hover:underline">
+                Electronics Service &amp; Support
+              </a>
+            </div>
+          </article>
         </section>
+
 
         {/* Footer */}
         <footer className="mt-5 border-t border-sony-rule pb-8 pt-3 text-center">
