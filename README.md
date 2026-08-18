@@ -1,25 +1,21 @@
-# Sony Website
-
-The goal of this repository is to recreate the 2002 Sony website using Lovable.
+# Sony 2002 Website Recreation
 
 ## About
-This project aims to replicate the layout, navigation, and content of the original Sony website, with a vibrant design and the inclusion of major categories like Music, Electronics, and Playable Games. It is built using Lovable, a UI design tool.
+This project aims to recreate the layout, navigation, and content of the original Sony 2002 website, with a vibrant design inspired by Sony's marketing of the era.
 
 ## Features
 - Replication of Sony's 2002 design, including colors and typography
-- Navigation and sections resembling "SEE," "HEAR," "PLAY," and "SHOP"
-- Interactive elements matching the original functionalities
-- Visual design inspired by the aesthetics of the Sony marketing of the era.
+- Navigation and sections such as "SEE," "HEAR," "PLAY," and "SHOP"
+- Interactive elements reflecting the original functionalities
 
-## Get Started
-1. Clone the repository: `git clone <repository-url>`
-2. Create a new branch if necessary: `git checkout -b new-feature`
-3. Make your changes in the Lovable editor
-4. Commit and push your changes: `git add . && git commit -m 'Your changes' && git push`
+## Image of the Original 2002 Sony Website
+The following image is of the original Sony 2002 website:
 
-This repository is designed for development and contribution through the Lovable tool. Contributions are welcome!
+![](https://github.com/robfernan/sony2002-recreationsite/blob/main/screenshot.png)
+
+This image can be an excellent reference when building the project.
 
 ## Contributing
 If you have any suggestions or would like to contribute parts of the Sony website project, feel free to open a pull request or issue.
 
-Thank you for your support in bringing this project to life.
+Thank you for your support in bringing this project to life!
