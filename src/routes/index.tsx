@@ -193,12 +193,12 @@ function Index() {
           />
 
           {/* SHOP card */}
-          <article className="relative flex flex-col bg-sony-panel sm:col-span-2 lg:col-span-1">
-            <div
-              className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
-              style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-            />
+          <article
+            className="relative flex flex-col bg-sony-panel sm:col-span-2 lg:col-span-1 lg:mt-[52px]"
+            style={{ clipPath: "polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%)" }}
+          >
             <div className="flex-1 px-3 pb-3 pt-3">
+
               <h2 className="text-[15px] font-bold text-sony-blue">SHOP</h2>
               <div className="mt-2 flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
                 <div className="min-w-0">
@@ -280,12 +280,12 @@ function Card({
   footer: string[];
 }) {
   return (
-    <article className="relative flex flex-col bg-sony-panel">
-      <div
-        className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
-        style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-      />
+    <article
+      className="relative flex flex-col bg-sony-panel"
+      style={{ clipPath: "polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%)" }}
+    >
       <div className="flex-1 px-3 pb-3 pt-3">
+
         <h2 className="text-[15px] font-bold text-sony-blue">{title}</h2>
         <p className="mb-2 mt-1 text-[11px] text-sony-orange">{url}</p>
         <img src={promo} alt={promoAlt} width={120} height={60} loading="lazy" className="block" />
