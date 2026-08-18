@@ -61,7 +61,7 @@ function Index() {
       <div className="mx-auto w-full max-w-[740px] px-3 lg:px-0">
 
         {/* Masthead */}
-        <header className="flex items-end gap-6 py-3">
+        <header className="flex flex-wrap items-end gap-x-6 gap-y-2 py-3">
           <img
             src={logoAsset.url}
             alt="Sony"
