@@ -106,7 +106,7 @@ function Index() {
         </nav>
 
         {/* Hero */}
-        <section className="relative mt-[6px]">
+        <section className="relative mt-[6px] @container">
           <img
             src={moodAsset.url}
             alt="Welcome to the world of Sony — music, movies, TV, games, electronics"
