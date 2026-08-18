@@ -123,8 +123,8 @@ function Index() {
           </aside>
         </section>
 
-        {/* Card row */}
-        <section className="mt-[6px] grid grid-cols-3 gap-[6px]">
+        {/* Card row — SEE / HEAR / PLAY / SHOP */}
+        <section className="mt-[6px] grid grid-cols-1 gap-[6px] sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1.6fr]">
           <Card
             title="SEE"
             url="www.screenblast.com"
@@ -176,56 +176,55 @@ function Index() {
             }
             footer={["PlayStation", "The Station", "AIBO", "Metreon"]}
           />
-        </section>
 
-        {/* Shop panel */}
-        <section className="relative mt-[6px] bg-sony-panel">
-          <div
-            className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
-            style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-          />
-          <div className="flex items-start justify-between gap-6 px-3 pb-2 pt-3">
-            <div>
+          {/* SHOP card */}
+          <article className="relative flex flex-col bg-sony-panel sm:col-span-2 lg:col-span-1">
+            <div
+              className="absolute left-0 top-0 h-[16px] w-[16px] bg-background"
+              style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+            />
+            <div className="flex-1 px-3 pb-3 pt-3">
               <h2 className="text-[15px] font-bold text-sony-blue">SHOP</h2>
-              <p className="mb-2 mt-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
-              <div className="grid grid-cols-2 gap-x-8">
-                <div>
+              <div className="mt-2 flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+                <div className="min-w-0">
                   <ChevLink>Electronics at Sony Style</ChevLink>
                   <ChevLink>PlayStation Store</ChevLink>
                   <ChevLink>Sony Pictures Studio Store</ChevLink>
-                </div>
-                <div>
                   <ChevLink>Sony Music Shop</ChevLink>
                   <ChevLink>Get the Sony Card</ChevLink>
                 </div>
+                <div className="shrink-0">
+                  <p className="mb-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
+                  <img
+                    src={promo4Asset.url}
+                    alt="Back to School in SonyStyle"
+                    width={120}
+                    height={60}
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
               </div>
             </div>
-            <img
-              src={promo4Asset.url}
-              alt="Back to School in SonyStyle"
-              width={120}
-              height={60}
-              loading="lazy"
-              className="mt-[6px] block"
-            />
-          </div>
-          <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
-            {["CLIÉ", "VAIO", "Mavica", "Handycam", "Memory Stick", "Sony Ericsson", "Xplod"].map(
-              (t, i, arr) => (
-                <span key={t}>
-                  <a href="#" className="hover:underline">
-                    {t}
-                  </a>
-                  {i < arr.length - 1 && <span className="px-1 text-sony-rule">|</span>}
-                </span>
-              ),
-            )}
-            <span className="px-1 text-sony-rule">|</span>
-            <a href="#" className="hover:underline">
-              Electronics Service &amp; Support
-            </a>
-          </div>
+            <div className="bg-sony-panel-deep px-3 py-2 text-[11px] leading-[1.6]">
+              {["CLIÉ", "VAIO", "Mavica", "Handycam", "Memory Stick", "Sony Ericsson", "Xplod"].map(
+                (t, i, arr) => (
+                  <span key={t}>
+                    <a href="#" className="hover:underline">
+                      {t}
+                    </a>
+                    {i < arr.length - 1 && <span className="px-1 text-sony-rule">|</span>}
+                  </span>
+                ),
+              )}
+              <br />
+              <a href="#" className="hover:underline">
+                Electronics Service &amp; Support
+              </a>
+            </div>
+          </article>
         </section>
+
 
         {/* Footer */}
         <footer className="mt-5 border-t border-sony-rule pb-8 pt-3 text-center">
