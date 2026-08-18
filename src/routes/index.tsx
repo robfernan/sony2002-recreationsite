@@ -91,7 +91,7 @@ function Index() {
         </header>
 
         {/* Nav bar */}
-        <nav className="flex items-center gap-[10px] whitespace-nowrap border-y border-sony-rule py-[5px] text-[9px] font-bold tracking-wide">
+        <nav className="flex items-center gap-x-[10px] gap-y-1 border-y border-sony-rule py-[5px] text-[9px] font-bold tracking-wide max-lg:flex-wrap lg:whitespace-nowrap">
           <a href="#" className="text-sony-blue hover:underline">
             <Arrow /> SHOP
           </a>
@@ -114,15 +114,29 @@ function Index() {
             height={231}
             className="block w-full"
           />
-          <aside className="absolute right-[18px] top-[56px] w-[172px] text-background">
-            <h2 className="text-[14px] font-bold">what&apos;s new</h2>
-            <p className="mt-2 text-[10px] leading-[1.5]">
+          <aside
+            className="absolute right-[2.4%] top-[24%] hidden w-[23.5%] text-background sm:block"
+            style={{ fontSize: "1.35cqw" }}
+          >
+            <h2 className="text-[1.9em] font-bold leading-none">what&apos;s new</h2>
+            <p className="mt-[0.8em] text-[1.35em] leading-[1.5]">
               PlayStation 2 is now online! Feel the power of the new Network Adaptor for
               PlayStation 2 which includes playable demos of Madden NFL 2003, Frequency and more.
               <span className="font-bold"> Get your game online.</span>
             </p>
           </aside>
         </section>
+
+        {/* What's new — small screens */}
+        <section className="mt-[6px] bg-sony-orange px-3 py-3 text-background sm:hidden">
+          <h2 className="text-[14px] font-bold">what&apos;s new</h2>
+          <p className="mt-2 text-[11px] leading-[1.5]">
+            PlayStation 2 is now online! Feel the power of the new Network Adaptor for PlayStation
+            2 which includes playable demos of Madden NFL 2003, Frequency and more.
+            <span className="font-bold"> Get your game online.</span>
+          </p>
+        </section>
+
 
         {/* Card row — SEE / HEAR / PLAY / SHOP */}
         <section className="mt-[6px] grid grid-cols-1 gap-[6px] sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1.6fr]">
