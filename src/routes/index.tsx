@@ -57,8 +57,9 @@ const topNav = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-sony-blue">
-      <div className="mx-auto w-[740px] max-w-full">
+    <div className="min-h-screen bg-background text-sony-blue [zoom:1] min-[1500px]:[zoom:1.3] min-[2200px]:[zoom:1.85] min-[3200px]:[zoom:2.6]">
+      <div className="mx-auto w-full max-w-[740px] px-3 lg:px-0">
+
         {/* Masthead */}
         <header className="flex items-end gap-6 py-3">
           <img
