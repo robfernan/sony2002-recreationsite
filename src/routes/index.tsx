@@ -115,8 +115,8 @@ function Index() {
             className="block w-full"
           />
           <aside
-            className="absolute right-[2.4%] top-[24%] hidden w-[23.5%] text-background sm:block"
-            style={{ fontSize: "1.35cqw" }}
+            className="absolute right-[2.4%] top-[21%] hidden w-[24%] text-background sm:block"
+            style={{ fontSize: "1.12cqw" }}
           >
             <h2 className="text-[1.9em] font-bold leading-none">what&apos;s new</h2>
             <p className="mt-[0.8em] text-[1.35em] leading-[1.5]">
