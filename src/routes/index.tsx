@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/hdr_logo_sony.gif.asset.json";
-import moodAsset from "@/assets/home_photo_mood.jpg.asset.json";
-import promo1Asset from "@/assets/home_photo_promo1_on.jpg.asset.json";
-import promo2Asset from "@/assets/home_photo_promo2_on.jpg.asset.json";
-import promo3Asset from "@/assets/home_photo_promo3_on.jpg.asset.json";
-import promo4Asset from "@/assets/home_photo_promo4_on.jpg.asset.json";
+const logoAsset = "/assets/hdr_logo_sony.gif";
+const moodAsset = "/assets/home_photo_mood.jpg";
+const promo1Asset = "/assets/home_photo_promo1_on.jpg";
+const promo2Asset = "/assets/home_photo_promo2_on.jpg";
+const promo3Asset = "/assets/home_photo_promo3_on.jpg";
+const promo4Asset = "/assets/home_photo_promo4_on.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,7 +63,7 @@ function Index() {
         {/* Masthead */}
         <header className="flex flex-wrap items-end gap-x-6 gap-y-2 py-3">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Sony"
             width={101}
             height={52}
@@ -108,7 +108,7 @@ function Index() {
         {/* Hero */}
         <section className="relative mt-[6px] @container">
           <img
-            src={moodAsset.url}
+            src={moodAsset}
             alt="Welcome to the world of Sony — music, movies, TV, games, electronics"
             width={740}
             height={231}
@@ -143,7 +143,7 @@ function Index() {
           <Card
             title="SEE"
             url="www.screenblast.com"
-            promo={promo1Asset.url}
+            promo={promo1Asset}
             promoAlt="Wake Up Show .com"
             body={
               <>
@@ -160,7 +160,7 @@ function Index() {
           <Card
             title="HEAR"
             url="usa.sonymusic.com"
-            promo={promo2Asset.url}
+            promo={promo2Asset}
             promoAlt="Barbershop — in stores August 27th"
             body={
               <>
@@ -177,7 +177,7 @@ function Index() {
           <Card
             title="PLAY"
             url="gameshownetwork.com"
-            promo={promo3Asset.url}
+            promo={promo3Asset}
             promoAlt="Connect & Collect Sweepstakes"
             body={
               <>
@@ -211,7 +211,7 @@ function Index() {
                 <div className="shrink-0">
                   <p className="mb-1 text-[11px] text-sony-orange">www.sonystyle.com</p>
                   <img
-                    src={promo4Asset.url}
+                    src={promo4Asset}
                     alt="Back to School in SonyStyle"
                     width={120}
                     height={60}
