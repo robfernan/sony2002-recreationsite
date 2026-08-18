@@ -1,24 +1,25 @@
-# Image To Web Studio
+# Sony Website
 
-i want you to recreate this image back as a website
+The goal of this repository is to recreate the 2002 Sony website using Lovable.
 
-This project was built with [Lovable](https://lovable.dev).
+## About
+This project aims to replicate the layout, navigation, and content of the original Sony website, with a vibrant design and the inclusion of major categories like Music, Electronics, and Playable Games. It is built using Lovable, a UI design tool.
 
-## Build with Lovable
+## Features
+- Replication of Sony's 2002 design, including colors and typography
+- Navigation and sections resembling "SEE," "HEAR," "PLAY," and "SHOP"
+- Interactive elements matching the original functionalities
+- Visual design inspired by the aesthetics of the Sony marketing of the era.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/edc10d30-5b42-46f1-a2dd-4c4d253933cf).
+## Get Started
+1. Clone the repository: `git clone <repository-url>`
+2. Create a new branch if necessary: `git checkout -b new-feature`
+3. Make your changes in the Lovable editor
+4. Commit and push your changes: `git add . && git commit -m 'Your changes' && git push`
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+This repository is designed for development and contribution through the Lovable tool. Contributions are welcome!
 
-## Development
+## Contributing
+If you have any suggestions or would like to contribute parts of the Sony website project, feel free to open a pull request or issue.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Thank you for your support in bringing this project to life.
